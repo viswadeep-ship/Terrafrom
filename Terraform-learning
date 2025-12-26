@@ -23,6 +23,10 @@ we have a code in VS code, VS code to terraform now changes pushes to AWS, for t
 
 Create EC2 instance through terraform
 ---------------------------------------------------------
+Terraform file extension is .tf
+provider.tf -> where you can declare what provider you are using like AWS, Azure, GCP and so on
+
+
 
 
 
