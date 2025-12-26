@@ -14,8 +14,18 @@ deepi@Deepika MINGW64 /
 we are getting terraform not found system dont know where we have terraform, so we have to set env variables. search env in windows search bar and click on edit the system env variables.
 click on environment variables -> click on path -> edit -> give the software folder path in c drive here we have terraform right, click ok -> click ok
 close git bash and open again  give terraform command and it is working now.
-in windows laptop we have vs code whatever writing code need to push in github and we are writing code for aws so we have to login aws, how we are login we have to configure now, in ec2 instance we have configuration already. through CLI we can login
-search in google like 
+in windows laptop we have vs code whatever writing code need to push in github and we are writing code for aws so we have to login aws, how we are login we have to configure now, in ec2 instance we have configuration already. we are doing in laptop so will install command line through CLI we can login
+search in google like aws command line install.
+here click on windows -> under download u can see one URL click on that it downloads AWS ALI.
+now we have VS code and terraform in laptop, terraform need to connect to AWS, can login from terraform to AWS through CLI.
+terraform connects to AWS CLI.
+we have a code in VS code, VS code to terraform now changes pushes to AWS, for that we need CLI.
+
+Create EC2 instance through terraform
+---------------------------------------------------------
+
+
+
 
 
 
