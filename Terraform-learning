@@ -1,0 +1,21 @@
+you are giving orders to terraform to create infrastructure just by providing right infrastructure.
+easy syntax
+no sequence
+state management -> terraform can track what it created, can update easily
+HCL => hashicorp configuration language using in terraform.
+download terraform -> search in google like download terraform  -> download 386 -> downloaded now and created software folder in c drive and copied here 386 terraform => right click and extract.
+extracted and copied terrafom and kept in software folder.
+login to bash and type terraform
+deepi@Deepika MINGW64 /
+$ terraform
+bash: terraform: command not found
+
+deepi@Deepika MINGW64 /
+we are getting terraform not found system dont know where we have terraform, so we have to set env variables. search env in windows search bar and click on edit the system env variables.
+click on environment variables -> click on path -> edit -> give the software folder path in c drive here we have terraform right, click ok -> click ok
+close git bash and open again  give terraform command and it is working now.
+in windows laptop we have vs code whatever writing code need to push in github and we are writing code for aws so we have to login aws, how we are login we have to configure now, in ec2 instance we have configuration already. through CLI we can login
+search in google like 
+
+
+
