@@ -20,11 +20,36 @@ here click on windows -> under download u can see one URL click on that it downl
 now we have VS code and terraform in laptop, terraform need to connect to AWS, can login from terraform to AWS through CLI.
 terraform connects to AWS CLI.
 we have a code in VS code, VS code to terraform now changes pushes to AWS, for that we need CLI.
+Terraform -> Azure, AWS, GCP, alibaba, digital ocean ect., Github, networking etc. These are the providers for terraform.
 
 Create EC2 instance through terraform
 ---------------------------------------------------------
 Terraform file extension is .tf
 provider.tf -> where you can declare what provider you are using like AWS, Azure, GCP and so on
+search in google like terraform provider, here can see all providers like azure, aws, gcp and so on, click on AWS click on providers right side top and below you can see some code copy and paste in VS code.
+
+Create Terrafrom folder in VS code, under Terrafrom create EC2 folder and under EC2 create a file provider.tf
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "6.27.0"
+    }
+  }
+}
+
+provider "aws" {
+  # Configuration options         ==> here u have to give authentication information -> if i give authentication info here and if i push to github secret key and credentials will be public
+}
+copy and paste above content in provider.tf file
+
+login to bash
+give aws configure
+so you have to create a user -> login to aws console -> IAM -> create user -> give name as terraform and create and copy ID's and paste in git bash.
+
+
+
+
 
 
 
