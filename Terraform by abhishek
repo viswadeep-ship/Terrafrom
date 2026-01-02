@@ -279,9 +279,55 @@ terraform destroy ->terraform will delete the resource whatever you created.
 =====================================================================================================================================================
 
 DAY-2 :-
-Provider:- provider is a plugin that helps terraform to understand that where it has to create the infrastructure.
+Provider:- provider is a plugin that helps terraform to understand that where it has to create the infrastructure like AWS or AZURE 0r GCP ......
+provider "aws" {
+  region = "us-east-1"
+}
 
+resource "aws_instance" "example" {
+  ami = "ami-0123456789abcdef0" # Change the AMI 
+  instance_type = "t2.micro"
+}
 
+Multiple Providers :-
+You can use multiple providers in one single terraform project. For example,
+
+Create a providers.tf file in the root directory of your Terraform project.
+In the providers.tf file, define the AWS and Azure providers. For example:
+provider "aws" {
+  region = "us-east-1"             ==> we already configured aws configure here we provided aws access key and secret key so need to provide again here.
+}
+
+provider "azurerm" {
+  subscription_id = "your-azure-subscription-id"
+  client_id = "your-azure-client-id"
+  client_secret = "your-azure-client-secret"
+  tenant_id = "your-azure-tenant-id"
+}
+In your other Terraform configuration files, you can then use the aws and azurerm providers to create resources in AWS and Azure, respectively,
+resource "aws_instance" "example" {
+  ami = "ami-0123456789abcdef0"
+  instance_type = "t2.micro"
+}
+
+resource "azurerm_virtual_machine" "example" {
+  name = "example-vm"
+  location = "eastus"
+  size = "Standard_A1"
+}
+
+VARIABLES:-
+we have 2 types in variables
+1. Input variable ==> if u want to pass some information to terraform this is called input variable
+2. output variable ==> if u want terraform to print a particular value in the output -> yesterday created 1 EC2 instance after instance creation so i dont want to go to the AWS CLI and dont want to check the public IP.
+  
+provider "aws" {
+    region = "us-east-1"  # Set your desired AWS region
+}
+
+resource "aws_instance" "example" {
+    ami           = "ami-0ecb62995f68bb549"  # Specify an appropriate AMI ID     => here we are giving AMI value if we hardcord this value we can use this script in other projects also
+    instance_type = "t2.micro"    => if we hardcord this also we can use to other projects
 
 
 
